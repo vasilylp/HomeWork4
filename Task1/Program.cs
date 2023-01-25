@@ -30,11 +30,8 @@ int InputNumber(string message)
     return number;
 }
 
+
 int A = InputNumber("Введите число А: ");
 int B = InputNumber("Введите число В: ");
-
-double exponentA = Exponentiation(A,B);
-System.Console.WriteLine($"{A},{B} -> {exponentA}");
-
-
-
+double sumexponentA = Exponentiation(A,B);
+System.Console.WriteLine($"{A},{B} -> {sumexponentA}");
