@@ -5,12 +5,22 @@
 // 2, 4 -> 16
 //____________Решение _____________________________________________________________________
 
-double Exponentiation(int numA, int numB)
+double Exponentiation(int numA, int numB) // метод Math.Pow
 {
-    double exponentA = Math.Pow(numA,numB);
+    double exponentA = Math.Pow(numA, numB);
     return exponentA;
 }
-
+double ExponentiationArr(int numA, int numB) // Метод с циклом While
+{
+    int i = 1;
+    int exponA = 1;
+    while (i <= numB)
+    {
+        exponA = exponA * numA;
+        i++;
+    }
+    return exponA;
+}
 
 int InputNumber(string message)
 {
@@ -33,5 +43,8 @@ int InputNumber(string message)
 
 int A = InputNumber("Введите число А: ");
 int B = InputNumber("Введите число В: ");
-double sumexponentA = Exponentiation(A,B);
-System.Console.WriteLine($"{A},{B} -> {sumexponentA}");
+double sumexponentA = Exponentiation(A, B);            // метод Math.Pow
+System.Console.WriteLine($"{A},{B} -> {sumexponentA}");// метод Math.Pow
+
+double sumexponA = ExponentiationArr(A, B);           // Метод с циклом While
+System.Console.WriteLine($"{A},{B} -> {sumexponA}");  // Метод с циклом While
